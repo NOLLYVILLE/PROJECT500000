@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bleemax Food Shop</title>
+</head>
+<body style="background: blueviolet">
+    <div>
+        {% for afang in eno %}
+        <div>
+            <a href="{% url 'food' afang.id %}"><p>Name:{{afang.name}}</p></a>
+            <a href="{% url 'food' afang.id %}"><p>Image: <img src="{{afang.image.url}}" style="height: 100px;" alt=""></p></a>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
